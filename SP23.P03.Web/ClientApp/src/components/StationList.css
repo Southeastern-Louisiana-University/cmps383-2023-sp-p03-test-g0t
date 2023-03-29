@@ -1,0 +1,24 @@
+.station-list{
+ display: flex;
+ gap: 10px;
+ column-gap: 10px;
+ flex-wrap: wrap;
+ width: 100%;
+ margin: 10px;
+ justify-content: center;
+}
+
+.station-list > .station-list_item{
+    width: 100px;
+    height: 100px;
+
+    background-color: grey;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.station-list > .station-list_item.selected{
+    
+    background-color: lightskyblue;
+}

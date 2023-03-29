@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useContext, useEffect, useMemo } from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { SearchBox } from "./components/SearchBox";
+import { StationList } from "./components/StationList";
+import { StationPicker } from "./components/StationPicker";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StationPicker title={"Orgin"} />
+      <StationPicker title={"Destination"} />
     </div>
   );
 }

@@ -22,9 +22,14 @@ public class StationsController : ControllerBase
     }
 
     [HttpGet]
-    public IQueryable<TrainStationDto> GetAllStations()
+    public IQueryable<TrainStationDto> GetAllStations(string? searchTerm)
     {
-        return GetTrainStationDtos(stations);
+        IQueryable<TrainStation> entities = stations;
+        if(!string.IsNullOrWhiteSpace(searchTerm))
+        {
+            entities = entities.Where(x => x.Name.Contains(searchTerm) || x.Address.Contains(searchTerm));
+        }
+        return GetTrainStationDtos(entities.OrderBy(x => x.Name).Take(2));
     }
 
     [HttpGet]

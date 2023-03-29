@@ -1,8 +1,8 @@
 {
-	"folders": [
-		{
-			"path": "./SP23.P03.Web/ClientApp"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "SP23.P03.Web/ClientApp"
+    }
+  ],
+  "settings": {}
 }

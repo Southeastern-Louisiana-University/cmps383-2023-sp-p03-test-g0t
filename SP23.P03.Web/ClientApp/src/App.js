@@ -1,10 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useContext, useEffect, useMemo } from "react";
-import React, { useState } from "react";
-import axios from "axios";
-import { SearchBox } from "./components/SearchBox";
-import { StationList } from "./components/StationList";
+import React from "react";
 import { StationPicker } from "./components/StationPicker";
 
 function App() {

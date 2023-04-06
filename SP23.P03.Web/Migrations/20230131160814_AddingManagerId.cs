@@ -10,6 +10,9 @@ namespace SP23.P03.Web.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.Sql(@"
+DELETE FROM dbo.TrainStation
+");
             migrationBuilder.AddColumn<int>(
                 name: "ManagerId",
                 table: "TrainStation",
